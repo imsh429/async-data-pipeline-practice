@@ -1,0 +1,38 @@
+2026-07-20 21:02:38 [INFO] 비동기 파이프라인 데이터 수집 가동
+2026-07-20 21:02:39 [INFO] HTTP Request: GET http://ip-api.com/json/8.8.8.8 "HTTP/1.1 200 OK"
+2026-07-20 21:02:39 [INFO] [ip-api(지역)] API 수집 완료 (status : 200)
+2026-07-20 21:02:40 [INFO] HTTP Request: GET https://countries.dev/alpha/KOR "HTTP/1.1 200 OK"
+2026-07-20 21:02:40 [INFO] [Countries.dev(국가)] API 수집 완료 (status : 200)
+2026-07-20 21:02:40 [INFO] HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=37.5665&longitude=126.9780&hourly=temperature_2m,precipitation_probability&forecast_days=3&timezone=Asia/Seoul "HTTP/1.1 200 OK"
+2026-07-20 21:02:40 [INFO] [Open-Meteo(날씨)] API 수집 완료 (status : 200)
+2026-07-20 21:02:40 [INFO] [검증 단계] Pydantic v2 스키마 기반 유효성 검사 시작
+2026-07-20 21:02:40 [INFO]   ➔ 날씨 데이터 스키마 검증 통과!
+2026-07-20 21:02:40 [ERROR] 스키마 검증 실패 (타입 또는 범위 에러 발생): 
+[{"type":"string_too_short","loc":["alpha2"],"msg":"String should have at least 2 characters","input":"","ctx":{"min_length":2},"url":"https://errors.pydantic.dev/2.13/v/string_too_short"},{"type":"string_too_short","loc":["alpha3"],"msg":"String should have at least 3 characters","input":"","ctx":{"min_length":3},"url":"https://errors.pydantic.dev/2.13/v/string_too_short"}]
+2026-07-20 21:04:11 [INFO] 비동기 파이프라인 데이터 수집 가동
+2026-07-20 21:04:12 [INFO] HTTP Request: GET https://countries.dev/alpha/KOR "HTTP/1.1 200 OK"
+2026-07-20 21:04:12 [INFO] [Countries.dev(국가)] API 수집 완료 (status : 200)
+2026-07-20 21:04:12 [INFO] HTTP Request: GET http://ip-api.com/json/8.8.8.8 "HTTP/1.1 200 OK"
+2026-07-20 21:04:12 [INFO] [ip-api(지역)] API 수집 완료 (status : 200)
+2026-07-20 21:04:12 [INFO] HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=37.5665&longitude=126.9780&hourly=temperature_2m,precipitation_probability&forecast_days=3&timezone=Asia/Seoul "HTTP/1.1 200 OK"
+2026-07-20 21:04:12 [INFO] [Open-Meteo(날씨)] API 수집 완료 (status : 200)
+2026-07-20 21:04:12 [INFO] 실제 국가 API 응답 데이터: {'area': 100210, 'cioc': 'KOR', 'flag': '🇰🇷', 'gini': 31.4, 'name': 'Korea (Republic of)', 'flags': {'png': 'https://flagcdn.com/w320/kr.png', 'svg': 'https://flagcdn.com/kr.svg'}, 'latlng': [37, 127.5], 'region': 'Asia', 'borders': ['PRK'], 'capital': 'Seoul', 'demonym': 'South Korean', 'languages': [{'name': 'Korean', 'iso639_1': 'ko', 'iso639_2': 'kor', 'nativeName': '한국어'}], 'subregion': 'Eastern Asia', 'timezones': ['UTC+09:00'], 'alpha2Code': 'KR', 'alpha3Code': 'KOR', 'currencies': [{'code': 'KRW', 'name': 'South Korean won', 'symbol': '₩'}], 'nativeName': '대한민국', 'population': 51780579, 'independent': True, 'numericCode': '410', 'callingCodes': ['82'], 'topLevelDomain': ['.kr'], 'populationDensity': 516.72}
+2026-07-20 21:04:12 [INFO] [검증 단계] Pydantic v2 스키마 기반 유효성 검사 시작
+2026-07-20 21:04:12 [INFO]   ➔ 날씨 데이터 스키마 검증 통과!
+2026-07-20 21:04:12 [ERROR] 스키마 검증 실패 (타입 또는 범위 에러 발생): 
+[{"type":"string_too_short","loc":["alpha2"],"msg":"String should have at least 2 characters","input":"","ctx":{"min_length":2},"url":"https://errors.pydantic.dev/2.13/v/string_too_short"},{"type":"string_too_short","loc":["alpha3"],"msg":"String should have at least 3 characters","input":"","ctx":{"min_length":3},"url":"https://errors.pydantic.dev/2.13/v/string_too_short"}]
+2026-07-20 21:05:53 [INFO] 비동기 파이프라인 데이터 수집 가동
+2026-07-20 21:05:54 [INFO] HTTP Request: GET http://ip-api.com/json/8.8.8.8 "HTTP/1.1 200 OK"
+2026-07-20 21:05:54 [INFO] [ip-api(지역)] API 수집 완료 (status : 200)
+2026-07-20 21:05:54 [INFO] HTTP Request: GET https://countries.dev/alpha/KOR "HTTP/1.1 200 OK"
+2026-07-20 21:05:54 [INFO] [Countries.dev(국가)] API 수집 완료 (status : 200)
+2026-07-20 21:05:55 [INFO] HTTP Request: GET https://api.open-meteo.com/v1/forecast?latitude=37.5665&longitude=126.9780&hourly=temperature_2m,precipitation_probability&forecast_days=3&timezone=Asia/Seoul "HTTP/1.1 200 OK"
+2026-07-20 21:05:55 [INFO] [Open-Meteo(날씨)] API 수집 완료 (status : 200)
+2026-07-20 21:05:55 [INFO] [검증 단계] Pydantic v2 스키마 기반 유효성 검사 시작
+2026-07-20 21:05:55 [INFO]   ➔ 날씨 데이터 스키마 검증 통과!
+2026-07-20 21:05:55 [INFO]   ➔ 국가 정보 데이터 스키마 검증 통과!
+2026-07-20 21:05:55 [INFO]   ➔ IP 기반 지역 정보 스키마 검증 통과!
+2026-07-20 21:05:55 [INFO] 모든 데이터가 Pydantic v2 타입·범위 검증을 완료했습니다.
+2026-07-20 21:05:55 [INFO] [성능 비교] CSV vs Parquet 파일 입출력 및 스토리지 최적화 평가
+2026-07-20 21:05:55 [INFO] [분석 결과] 이번 측정에서는 쓰기 CSV, 읽기 CSV가 더 빨랐습니다.
+2026-07-20 21:05:55 [INFO] (데이터 규모가 작아 Parquet의 압축·메타데이터 오버헤드가 상대적으로 크게 작용했을 수 있습니다.)

@@ -8,17 +8,21 @@
 """
 
 import httpx
+import logging
+
+# main.py에서 설정한 로깅 설정을 공유받습니다.
+logger = logging.getLogger(__name__)
 
 async def fetch_data(client: httpx.AsyncClient, name: str, url: str) -> dict:
     """지정된 API URL로 비동기 GET 요청을 보내고 JSON 응답을 반환합니다."""
     try:
         response = await client.get(url, timeout=10.0)
         if response.status_code == 200:
-            print(f"[{name}] API 수집 완료 (status : {response.status_code})")
+            logger.info(f"[{name}] API 수집 완료 (status : {response.status_code})")
             return response.json()
         else:
-            print(f"[{name}] API 응답 에러 (status : {response.status_code})")
+            logger.warning(f"[{name}] API 응답 에러 (status : {response.status_code})")
             return {}
     except Exception as e:
-        print(f"[{name}] 연결 실패: {str(e)}")
+        logger.error(f"[{name}] 연결 에러 발생: {str(e)}")
         return {}
