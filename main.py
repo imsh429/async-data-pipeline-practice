@@ -158,7 +158,7 @@ async def main_pipeline():
 
         # 결과 화면 출력 (슬라이드 요구사항: 성능 측정 결과 출력 준수)
         print("-" * 60)
-        print(f"포맷 종류   | 쓰기 속도(초)         | 읽기 속도(초)")
+        print("포맷 종류   | 쓰기 속도(초)         | 읽기 속도(초)")
         print("-" * 60)
         print(f"CSV         | {csv_write_time:.6f}초         | {csv_read_time:.6f}초")
         print(f"Parquet     | {parquet_write_time:.6f}초         | {parquet_read_time:.6f}초")
