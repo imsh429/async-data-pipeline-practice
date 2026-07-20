@@ -1,0 +1,21 @@
+# 1. 가상환경 
+.venv/
+venv/
+env/
+
+# 2. 파이썬 실행 캐시 파일
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 3. 툴 캐시 (pytest, ruff)
+.pytest_cache/
+.ruff_cache/
+
+# 4. macOS 시스템 파일 (맥북 유저 필수!)
+.DS_Store
+
+# 5. 데이터 엔지니어링 산출물 (선택)
+*.csv
+*.parquet
