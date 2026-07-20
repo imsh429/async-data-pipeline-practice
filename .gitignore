@@ -19,3 +19,5 @@ __pycache__/
 # 5. 데이터 엔지니어링 산출물 (선택)
 *.csv
 *.parquet
+
+*.log
